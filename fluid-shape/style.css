@@ -1,0 +1,266 @@
+@charset "utf-8";
+
+/* ====================
+  全体共通
+==================== */
+* {
+  box-sizing: border-box; /* padding・borderを含めてサイズ計算 */
+}
+
+body {
+  margin: 0; /* ブラウザ標準余白を除去 */
+  color: #111; /* 基本文字色 */
+  font-size: 16px; /* 基本フォントサイズ */
+  min-width: 1200px /* 最小幅 */
+}
+
+a {
+  color: inherit; /* 親要素の文字色を継承 */
+  text-decoration: none; /* 下線を削除 */
+}
+
+/* ====================
+  header
+==================== */
+
+/*** ヘッダー全体 ***/
+header {
+  height: 596px; /* ヘッダー高さ */
+  display: flex; /* フレックスレイアウト */
+  flex-direction: column; /* 縦方向に配置 */
+  position: relative; /* 子要素の絶対配置基準 */
+  background: url(img/header.svg) no-repeat top right/contain; /* 背景画像設定 */
+}
+
+/*** ロゴ／ナビ ***/
+.links {
+  width: 100%; /* 横幅いっぱい */
+  display: flex; /* 横並び */
+  justify-content: space-between; /* 両端揃え */
+  align-items: center; /* 縦中央揃え */
+  padding: 50px 100px 0; /* 上・左右の余白 */
+}
+
+/*** ロゴ ***/
+.links .logo {
+  font-size: 48px; /* ロゴ文字サイズ */
+}
+
+/*** ナビ ***/
+.links nav {
+  display: flex; /* ナビを横並び */
+  gap: 50px; /* リンク間隔 */
+}
+
+.links nav a {
+  color: #fff; /* ナビリンク文字色 */
+}
+
+/*** メインコピー ***/
+.main-copy {
+  width: 100%; /* 横幅いっぱい */
+  font-size: 64px; /* メインコピー文字サイズ */
+  font-weight: 700; /* 太字 */
+  text-align: center; /* 中央揃え */
+  margin: 1em 0 0; /* 上余白 */
+  letter-spacing: .1em; /* 文字間隔 */
+}
+
+/*** サブコピー ***/
+.sub-copy {
+  font-size: 32px; /* サブコピー文字サイズ */
+  position: absolute; /* 絶対配置 */
+  left: 200px; /* 左からの位置 */
+  bottom: 0; /* 下端に配置 */
+}
+
+/* ====================
+  main共通
+==================== */
+main {
+  width: 1200px; /* コンテンツ最大幅 */
+  margin: auto; /* 中央寄せ */
+}
+
+section {
+  margin: 120px auto; /* セクション上下余白 */
+}
+
+h2 {
+  font-size: 36px; /* 見出し文字サイズ */
+  margin-bottom: 1em; /* 下余白 */
+}
+
+/*** テキストエリア共通（.feature / .new-era） ***/
+.text-area p {
+  font-size: 20px; /* 本文文字サイズ */
+}
+
+/* ====================
+  .featureセクション
+==================== */
+
+/*** セクション全体 ***/
+.feature {
+  display: flex; /* フレックスレイアウト */
+  flex-direction: row-reverse; /* 要素の並びを反転 */
+  justify-content: center; /* 中央寄せ */
+  gap: 100px; /* 要素間隔 */
+}
+
+/*** テキストエリア（画面右） ***/
+.feature .text-area {
+  margin-top: 100px; /* 上余白 */
+}
+
+/*** 特徴3点（画面左） ***/
+.features {
+  width: 680px; /* エリア幅 */
+  height: 600px; /* エリア高さ */
+  position: relative; /* 子要素の配置基準 */
+  text-align: center; /* テキスト中央揃え */
+  color: #fff; /* 文字色 */
+}
+
+/*** 各特徴(div)共通 ***/
+.features div {
+  position: absolute; /* 重ねて配置 */
+  display: flex; /* フレックス */
+  flex-direction: column; /* 縦並び */
+  justify-content: center; /* 縦中央 */
+  align-items: center; /* 横中央 */
+  width: 360px; /* 円の幅 */
+  height: 360px; /* 円の高さ */
+}
+
+/*** 特徴・中央 ***/
+.center {
+  background: url(img/center.svg) center/contain no-repeat; /* 中央画像 */
+  top: 0; /* 上に配置 */
+  left: 50%; /* 横中央基準 */
+  transform: translateX(-50%); /* 真ん中に補正 */
+}
+
+/*** 特徴・左 ***/
+.left {
+  background: url(img/left.svg) center/contain no-repeat; /* 左画像 */
+  left: 0; /* 左寄せ */
+  bottom: 0; /* 下寄せ */
+}
+
+/*** 特徴・右 ***/
+.right {
+  background: url(img/right.svg) center/contain no-repeat; /* 右画像 */
+  right: 0; /* 右寄せ */
+  bottom: 0; /* 下寄せ */
+}
+
+/*** 特徴の見出し ***/
+.features h3 {
+  font-size: 20px; /* 見出し文字サイズ */
+  margin-bottom: 1em; /* 下余白 */
+}
+
+/* ====================
+  .new-eraセクション
+==================== */
+
+/*** セクション全体 ***/
+.new-era {
+  display: flex; /* 横並び */
+  align-items: center; /* 縦中央揃え */
+  justify-content: space-between; /* 両端配置 */
+}
+
+/*** テキストエリア（画面左） ***/
+.new-era .text-area {
+  width: 44%; /* テキスト幅 */
+}
+
+/*** 画像エリア（画面右） ***/
+.new-era img {
+  width: 50%; /* 画像幅 */
+  height: auto; /* 高さ自動調整 */
+}
+
+/* ====================
+  footer
+==================== */
+
+footer {
+  height: 300px; /* フッター高さ */
+  background: url(img/footer.svg) top center /cover no-repeat; /* 背景画像 */
+  display: flex; /* フレックス */
+  justify-content: center; /* 横中央 */
+  align-items: center; /* 縦中央 */
+}
+
+.copyright {
+  color: #fff; /* 文字色 */
+  margin-top: 40px; /* 上余白 */
+}
+
+/* ====================
+  .featureセクション
+==================== */
+
+/*** セクション全体 ***/
+.feature {
+  display: flex; /* フレックスレイアウト */
+  flex-direction: row-reverse; /* 要素の並びを反転 */
+  justify-content: center; /* 中央寄せ */
+  gap: 100px; /* 要素間隔 */
+}
+
+/*** テキストエリア（画面右） ***/
+.feature .text-area {
+  margin-top: 100px; /* 上余白 */
+}
+
+/*** 特徴3点（画面左） ***/
+.features {
+  width: 680px; /* エリア幅 */
+  height: 600px; /* エリア高さ */
+  position: relative; /* 子要素の配置基準 */
+  text-align: center; /* テキスト中央揃え */
+  color: #fff; /* 文字色 */
+}
+
+/*** 各特徴(div)共通 ***/
+.features div {
+  position: absolute; /* 重ねて配置 */
+  display: flex; /* フレックス */
+  flex-direction: column; /* 縦並び */
+  justify-content: center; /* 縦中央 */
+  align-items: center; /* 横中央 */
+  width: 360px; /* 円の幅 */
+  height: 360px; /* 円の高さ */
+}
+
+/*** 特徴・中央 ***/
+.center {
+  background: url(img/center.svg) center/contain no-repeat; /* 中央画像 */
+  top: 0; /* 上に配置 */
+  left: 50%; /* 横中央基準 */
+  transform: translateX(-50%); /* 真ん中に補正 */
+}
+
+/*** 特徴・左 ***/
+.left {
+  background: url(img/left.svg) center/contain no-repeat; /* 左画像 */
+  left: 0; /* 左寄せ */
+  bottom: 0; /* 下寄せ */
+}
+
+/*** 特徴・右 ***/
+.right {
+  background: url(img/right.svg) center/contain no-repeat; /* 右画像 */
+  right: 0; /* 右寄せ */
+  bottom: 0; /* 下寄せ */
+}
+
+/*** 特徴の見出し ***/
+.features h3 {
+  font-size: 20px; /* 見出し文字サイズ */
+  margin-bottom: 1em; /* 下余白 */
+}
